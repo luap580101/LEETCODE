@@ -85,11 +85,59 @@ function hello2(a: string, b: string): number {
   return 999;
 }
 
-function hello3(a:number, b:boolean, c:string){
-    return 100
+function hello3(a: number, b: boolean, c: string) {
+  return 100;
 }
 
 // nudefined
-function hello4 (name: string, age?:number){
-    return age
+let test2 = (a: number) => {
+  console.log(a);
+};
+
+function hello4(name: string, age?: number) {
+  //   age有可能是未定義
+  //   let a: number;
+  //   a = age;
+  if (age === undefined) return -1;
+  test2(age);
+  return age;
 }
+
+// 箭頭函式
+const func = () => {};
+const func2 = () => {
+  return 1;
+};
+
+// ==========斷言 unknow==========
+
+type Data = {
+  userId: number;
+  id: number;
+  title: string;
+  completed: boolean;
+};
+
+async function getData() {
+  const res = await fetch("https://jsonplaceholder.typicode.com/todos/1");
+  const data = (await res.json()) as Data;
+}
+
+const data1: Data = {
+  userId: 1,
+  id: 1,
+  title: "delectus aut autem",
+  completed: false,
+};
+
+type Beta ={
+    name: string
+}
+
+const beta = data1 as unknown as Beta
+
+// ==========class===========
+
+// private 私有
+// public 公開
+// private 受保護
