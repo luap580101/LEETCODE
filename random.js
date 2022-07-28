@@ -23,4 +23,4 @@ const getTodayPractise = (first, last, num) => {
   return arr;
 };
 // console.log(getTodayPractise(1, 5, 5));
-console.log(getTodayPractise(1, 44, 2));
+console.log(getTodayPractise(1, 150, 3));
