@@ -1,6 +1,8 @@
 import logo from "./logo.svg";
 import "./App.css";
 import DataList from "./components/DataList";
+import TestUaeRef from "./components/UaeRef";
+import MyuseReducer from "./components/MyuseReducer";
 
 function App() {
   const data = [
@@ -10,7 +12,9 @@ function App() {
   ];
   return (
     <>
-      <DataList data={ data } />
+      {/* <DataList data={ data } /> */}
+      {/* <TestUaeRef/> */}
+      <MyuseReducer/>
     </>
   );
 }
